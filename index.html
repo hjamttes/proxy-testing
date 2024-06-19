@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Themed Button Grid</title>
+    <style>
+        /* Add some basic styling to make it look space-themed */
+        body {
+            background-image: url('space-background.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        .button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <button class="button" onclick="window.open('https://www.nasa.gov', '_blank')">NASA</button>
+        <button class="button" onclick="window.open('https://www.space.com', '_blank')">Space.com</button>
+        <button class="button" onclick="window.open('https://www.esa.int', '_blank')">ESA</button>
+        <button class="button" onclick="window.open('https://www.planetary.org', '_blank')">Planetary Society</button>
+        <button class="button" onclick="window.open('https://www.astronomy.com', '_blank')">Astronomy</button>
+        <button class="button" onclick="window.open('https://www.cosmosmagazine.com', '_blank')">Cosmos Magazine</button>
+    </div>
+</body>
+</html>
