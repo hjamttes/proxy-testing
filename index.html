@@ -3,53 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Themed Button Grid</title>
+    <title>Google Classroom</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <style>
-        /* Add some basic styling to make it look space-themed */
+        /* Google Classroom styles */
         body {
-            background-image: linear-gradient(to bottom, #212121, #343434);
-            background-size: 100% 300px;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #333;
+            background-color: #f9f9f9;
         }
-       .grid-container {
+       .header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       .header-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4285f4;
+        }
+       .header-nav {
+            display: flex;
+            align-items: center;
+        }
+       .header-nav-item {
+            margin-right: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+        }
+       .header-nav-item:hover {
+            text-decoration: underline;
+        }
+       .classroom-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 940px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            gap: 16px;
+            padding: 24px;
         }
-       .button {
-            background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       .classroom-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 160px;
         }
-       .button:hover {
-            background-image: linear-gradient(to bottom, #3e8e41, #4CAF50);
+       .classroom-card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-       .button:active {
-            transform: translateY(2px);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+       .classroom-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+       .classroom-card-description {
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="grid-container">
-        <button class="button" onclick="window.open('https://www.nasa.gov', '_blank')">NASA</button>
-        <button class="button" onclick="window.open('https://www.space.com', '_blank')">Space.com</button>
-        <button class="button" onclick="window.open('https://www.esa.int', '_blank')">ESA</button>
-        <button class="button" onclick="window.open('https://www.planetary.org', '_blank')">Planetary Society</button>
-        <button class="button" onclick="window.open('https://www.astronomy.com', '_blank')">Astronomy</button>
-        <button class="button" onclick="window.open('https://www.cosmosmagazine.com', '_blank')">Cosmos Magazine</button>
-    </div>
+    <header class="header">
+        <div class="header-logo">Google Classroom</div>
+        <nav class="header-nav">
+            <a class="header-nav-item" href="#">Dashboard</a>
+            <a class="header-nav-item" href="#">Classes</a>
+            <a class="header-nav-item" href="#">About</a>
+        </nav>
+    </header>
+    <main class="classroom-grid">
+        <div class="classroom-card">
+            <h2 class="classroom-card-title">Classroom 1</h2>
+            <p class="classroom-card-description">This is a sample classroom.</p>
+            <a href="about:blank" target="_blank">Enter</a>
+        </div>
+        <div class="classroom-card">
+            <h2 class="classroom-card-title">Classroom 2</h2>
+            <p class="classroom-card-description">This is another sample classroom.</p>
+            <a href="about:blank" target="_blank">Enter</a>
+        </div>
+        <div class="classroom-card">
+            <h2 class="classroom-card-title">Classroom 3</h2>
+            <p class="classroom-card-description">This is yet another sample classroom.</p>
+            <a href="about:blank" target="_blank">Enter</a>
+        </div>
+        <!-- Add more classrooms here -->
+    </main>
 </body>
 </html>
