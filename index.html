@@ -14,7 +14,7 @@
             color: #333;
             background-color: #f9f9f9;
         }
-       .header {
+      .header {
             background-color: #fff;
             border-bottom: 1px solid #ddd;
             padding: 16px 24px;
@@ -22,32 +22,32 @@
             justify-content: space-between;
             align-items: center;
         }
-       .header-logo {
+      .header-logo {
             font-size: 24px;
             font-weight: 700;
             color: #4285f4;
         }
-       .header-nav {
+      .header-nav {
             display: flex;
             align-items: center;
         }
-       .header-nav-item {
+      .header-nav-item {
             margin-right: 24px;
             font-size: 14px;
             font-weight: 600;
             color: #333;
             text-decoration: none;
         }
-       .header-nav-item:hover {
+      .header-nav-item:hover {
             text-decoration: underline;
         }
-       .classroom-grid {
+      .classroom-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px;
             padding: 24px;
         }
-       .classroom-card {
+      .classroom-card {
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -56,28 +56,28 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 160px;
+            height: 240px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-       .classroom-card:hover {
+      .classroom-card:hover {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
-       .classroom-card-title {
+      .classroom-card-title {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 8px;
         }
-       .classroom-card-description {
+      .classroom-card-description {
             font-size: 14px;
             color: #666;
+            margin-bottom: 16px;
         }
-       .classroom-card-footer {
+      .classroom-card-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 16px;
         }
-       .classroom-card-footer-button {
+      .classroom-card-footer-button {
             background-color: #4285f4;
             color: #fff;
             border: none;
@@ -87,8 +87,13 @@
             border-radius: 4px;
             cursor: pointer;
         }
-       .classroom-card-footer-button:hover {
+      .classroom-card-footer-button:hover {
             background-color: #3367d6;
+        }
+      .classroom-card-footer-info {
+            font-size: 14px;
+            color: #666;
+            margin-left: 16px;
         }
     </style>
 </head>
@@ -118,8 +123,4 @@
             <h2 class="classroom-card-title">Classroom 2</h2>
             <p class="classroom-card-description">This is another sample classroom.</p>
             <div class="classroom-card-footer">
-                <button class="classroom-card-footer-button" onclick="window.open('about:blank', '_blank')">Enter</button>
-                <div class="classroom-card-footer-info">
-                    <span>Updated 2 hours ago</span>
-                    <span>•</span>
-                    <span>2 posts</span
+                <button class
