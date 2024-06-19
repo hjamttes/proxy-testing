@@ -1,45 +1,54 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMS Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Space Themed Button Grid</title>
+    <style>
+        /* Add some basic styling to make it look space-themed */
+        body {
+            background-image: url('https://ibb.co/ngbYB7G');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+       .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 940px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+       .button {
+            background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+       .button:hover {
+            background-image: linear-gradient(to bottom, #3e8e41, #4CAF50);
+        }
+       .button:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Lessons</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="dashboard">
-            <h1>Dashboard</h1>
-            <ul>
-                <li><a href="#">Course 1</a></li>
-                <li><a href="#">Course 2</a></li>
-                <li><a href="#">Course 3</a></li>
-            </ul>
-        </section>
-        <section class="course">
-            <h1>Course 1</h1>
-            <ul>
-                <li><a href="#">Lesson 1</a></li>
-                <li><a href="#">Lesson 2</a></li>
-                <li><a href="#">Lesson 3</a></li>
-            </ul>
-        </section>
-        <section class="lesson">
-            <h1>Lesson 1</h1>
-            <p>This is the content of Lesson 1</p>
-            <button class="complete-lesson-btn">Complete Lesson</button>
-        </section>
-    </main>
-    <script src="script.js"></script>
+    <div class="grid-container">
+        <button class="button" onclick="window.open('https://www.nasa.gov', '_blank')">NASA</button>
+        <button class="button" onclick="window.open('https://www.space.com', '_blank')">Space.com</button>
+        <button class="button" onclick="window.open('https://www.esa.int', '_blank')">ESA</button>
+        <button class="button" onclick="window.open('https://www.planetary.org', '_blank')">Planetary Society</button>
+        <button class="button" onclick="window.open('https://www.astronomy.com', '_blank')">Astronomy</button>
+        <button class="button" onclick="window.open('https://www.cosmosmagazine.com', '_blank')">Cosmos Magazine</button>
+    </div>
 </body>
 </html>
