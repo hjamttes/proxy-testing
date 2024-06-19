@@ -7,27 +7,38 @@
     <style>
         /* Add some basic styling to make it look space-themed */
         body {
-            background-image: url('space-background.jpg');
-            background-size: cover;
+            background-image: linear-gradient(to bottom, #212121, #343434);
+            background-size: 100% 300px;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
         }
-        .grid-container {
+       .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             max-width: 940px;
-            margin: 0 auto;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        .button {
-            background-color: #333;
+       .button {
+            background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        .button:hover {
-            background-color: #444;
+       .button:hover {
+            background-image: linear-gradient(to bottom, #3e8e41, #4CAF50);
+        }
+       .button:active {
+            transform: translateY(2px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
