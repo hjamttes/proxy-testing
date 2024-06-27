@@ -7,40 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
         }
-        #data {
-            white-space: pre-wrap;
-            background: #f0f0f0;
-            padding: 10px;
-            border: 1px solid #ddd;
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <h1>Data from Proxy</h1>
-    <button id="fetchButton">Fetch Data</button>
-    <pre id="data">Click the button to fetch data...</pre>
-
-    <script>
-        document.getElementById('fetchButton').addEventListener('click', async () => {
-            try {
-                const response = await fetch('/api/your-endpoint'); // replace 'your-endpoint' with the actual endpoint
-                
-                const contentType = response.headers.get('content-type');
-                let data;
-
-                if (contentType && contentType.includes('application/json')) {
-                    data = await response.json();
-                    document.getElementById('data').textContent = JSON.stringify(data, null, 2);
-                } else {
-                    data = await response.text();
-                    document.getElementById('data').textContent = data;
-                }
-            } catch (error) {
-                document.getElementById('data').textContent = 'Error fetching data: ' + error;
-            }
-        });
-    </script>
+    <iframe src="/api"></iframe>
 </body>
 </html>
