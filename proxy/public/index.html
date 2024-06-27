@@ -26,8 +26,17 @@
         document.getElementById('fetchButton').addEventListener('click', async () => {
             try {
                 const response = await fetch('/api/your-endpoint'); // replace 'your-endpoint' with the actual endpoint
-                const data = await response.json();
-                document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+                
+                const contentType = response.headers.get('content-type');
+                let data;
+
+                if (contentType && contentType.includes('application/json')) {
+                    data = await response.json();
+                    document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+                } else {
+                    data = await response.text();
+                    document.getElementById('data').textContent = data;
+                }
             } catch (error) {
                 document.getElementById('data').textContent = 'Error fetching data: ' + error;
             }
