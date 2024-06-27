@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Proxy</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-</head>
-<body>
-  <h1>Proxy</h1>
-  <input type="text" id="url" placeholder="Enter URL">
-  <button id="go">Go</button>
-  <div id="proxy-container"></div>
+  <head>
+    <title>Proxy System</title>
+  </head>
+  <body>
+    <button id="goButton">Go</button>
+    <div id="proxyContainer"></div>
 
-  <script src="proxy.js"></script>
-</body>
+    <script>
+      const goButton = document.getElementById('goButton');
+      const proxyContainer = document.getElementById('proxyContainer');
+
+      goButton.addEventListener('click', () => {
+        fetch(`https://cors-anywhere.herokuapp.com/https://shellshock.io/`)
+         .then(response => response.text())
+         .then(html => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const body = doc.body;
+            proxyContainer.innerHTML = '';
+            proxyContainer.appendChild(body);
+          })
+         .catch(error => console.error('Error:', error));
+      });
+    </script>
+  </body>
 </html>
