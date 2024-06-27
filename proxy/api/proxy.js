@@ -9,6 +9,10 @@ const proxy = createProxyMiddleware({
   pathRewrite: {
     '^/api': '', // remove base path
   },
+  onProxyReq: (proxyReq, req, res) => {
+    // Remove the '/api' prefix from the path
+    proxyReq.path = proxyReq.path.replace(/^\/api/, '');
+  },
 });
 
 app.use('/api', proxy);
