@@ -12,7 +12,7 @@
       const proxyContainer = document.getElementById('proxyContainer');
 
       goButton.addEventListener('click', () => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://shellshock.io/`)
+        fetch(`https://cors-anywhere-alpha-ten.vercel.app/https://shellshock.io/`)
          .then(response => response.text())
          .then(html => {
             const parser = new DOMParser();
